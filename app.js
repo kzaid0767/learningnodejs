@@ -1,9 +1,11 @@
 import { chdir, cwd } from 'node:process';
+import {firstName, greet} from './utils.js';
 import 'dotenv/config'
+
 
 //require ('dotenv').config()
 
-
+console.log(greet(firstName))
 console.log('skkj')
 
 //about the global variable
@@ -47,7 +49,7 @@ if(process.env.APP_ENV !== 'production'){
 } else{
     try {
         console.log(`The right production mode in ${cwd()}`);
-        chdir('D:/node/fistapp/test')
+        chdir('D:/node/firstapp/test')
         console.log(cwd())
     } catch (error) {
         console.log(`Something went wron ${error}`);
